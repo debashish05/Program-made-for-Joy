@@ -66,12 +66,14 @@ int main()
     
     for(int i=0;i<n;++i){
         unordered_map<ll,ll> v;
-        primeFactorisation(a[i],v);
-        bool magicNumber=true;
-        for(auto itr=u.begin();itr!=u.end();++itr){
-            if(u[itr->first]<2*v[itr->first])magicNumber=false;
+        if(ans>a[i]){
+            primeFactorisation(a[i],v);
+            bool magicNumber=true;
+            for(auto itr=u.begin();itr!=u.end();++itr){
+                if(u[itr->first]<2*v[itr->first]){magicNumber=false;break;}
+            }
+            if(magicNumber)ans=a[i];
         }
-        if(magicNumber && ans>a[i])ans=a[i];
     }
     
     cout<<ans<<"\n";
