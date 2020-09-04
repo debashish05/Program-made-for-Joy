@@ -6,6 +6,8 @@ in the set. WAP to find smallest magic numbers.
 
 2) {4,7,11,49}
  ans is 7, square of 7 is 49 and 49 perfectly divides 4*7*11*49.
+
+3) {14,33,6} answer is 6
  
 Note - atleast one of a factor in the product of numbers from set is a perfect square.
 */
