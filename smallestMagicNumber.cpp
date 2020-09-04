@@ -33,7 +33,7 @@ void primeFactorisation(ll temp,unordered_map <ll,ll> &u){
     }
         
     ll limit=(ll)sqrt(temp);
-    for(int j=1;j<=limit;j++){
+    for(int j=1;6*j-1<=limit;j++){
         while(temp%(6*j-1)==0){
             temp/=(6*j-1);
             if(u.find(6*j-1)==u.end())u[6*j-1]=1;
